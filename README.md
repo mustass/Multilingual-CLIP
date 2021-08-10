@@ -40,11 +40,9 @@ While it is possible that other versions works equally fine, we have worked with
 * Model Weights
 
 ## Usage
-##### Download CLIP Model
+##### Install
 ```bash
-$ conda install --yes -c pytorch pytorch=1.7.1 torchvision cudatoolkit=11.0
-$ pip install ftfy regex tqdm
-$ pip install git+https://github.com/openai/CLIP.git
+$ pip install git+https://github.com/mustass/Multilingual-CLIP
 ```
 Replace `cudatoolkit=11.0` above with the appropriate CUDA version on your machine or `cpuonly` when installing on a machine without a GPU.
 For more information please see the official [CLIP repostitory](https://github.com/openai/CLIP).
@@ -56,7 +54,7 @@ $ bash get-weights.sh
 
 ### Inference
 ```python
-from src import multilingual_clip
+from multiclip import multilingual_clip
 
 print(multilingual_clip.AVAILABLE_MODELS.keys())
 
